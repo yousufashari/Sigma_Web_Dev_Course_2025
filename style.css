@@ -1,0 +1,78 @@
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #22223b;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem 1rem 1rem;
+    background: #a9def9;
+    box-shadow: 0 2px 8px #b8c1ec44;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.7rem;
+    letter-spacing: 2px;
+    color: #22223b;
+    text-shadow: 0 2px 8px #b8c1ec33;
+}
+
+header p {
+    color: #5390d9;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.class-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.class-card {
+    background: linear-gradient(135deg, #e0e1dd 60%, #a9def9 100%);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #b8c1ec33;
+    padding: 1.5rem 2rem;
+    min-width: 200px;
+    max-width: 240px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    border: 2px solid #5390d955;
+}
+
+.class-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px #5390d955;
+    background: linear-gradient(135deg, #a9def9 30%, #5390d9 100%);
+    border-color: #5390d9;
+}
+
+.class-link {
+    color: #22223b;
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+.class-link:hover {
+    color: #5390d9;
+    text-shadow: 0 0 8px #a9def9;
+}
+
+@media (max-width: 700px) {
+    .class-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
