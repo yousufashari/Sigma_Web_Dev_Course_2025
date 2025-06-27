@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* its  specificity calculation is - 1 */
+        h1 {
+            color: red;
+        }
+
+        /* there specificity calculation is 1+ 10=11 */
+        h1.yellow {
+            color: rgb(201, 221, 18);
+        }
+
+        .cpurple {
+            color: purple;
+        }
+
+        .cred {
+            color: red;
+        }
+
+        /* this is attribute selector its specificity calculation is - 10 */
+        /* [data-x="a"] {
+            color: blue;
+        } */
+        /* ----------------------------------- */
+
+        /* h2 {
+            color: red;  */
+        /* there specificity calculation is - 10 */
+        .id1 {
+            color: green;
+        }
+
+        .id2 {
+            color: blue;
+        }
+
+        .id3 {
+            color: orange !important;
+        }
+
+        /* its specificity calculation is - 100 */
+        #ufo {
+            color: rgb(141, 6, 252);
+        }
+
+        /* important flag break the inline style specificity calculation */
+        h3 {
+            color: blue !important;
+        }
+        /* the specificity of this selector is 1+10+10+10+10=41 */
+            a.harryclass.rohan-class[href]:hover {
+  color: blueviolet;
+}
+        
+    </style>
+</head>
+
+<body>
+    <h1 class="yellow cred cpurple" data-x="a"="">CSS Specificity</h1>
+    <h2 id="ufo" class="id1 id2 id3">id selector</h2>
+    <!-- it is a inline style its specificity calculation is - 1000 -->
+    <h3 style="color: rgb(5, 253, 17);">inline style </h3>
+</body>
+
+</html>
